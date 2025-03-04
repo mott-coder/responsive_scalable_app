@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../core/app_export.dart';
+import 'package:responsive_scalable_app/core/app_export.dart';
 
 class AuthProvider extends ChangeNotifier {
   String getGreeting() {

@@ -5,16 +5,16 @@ import '../../../core/app_export.dart';
 class ProfilePageListWidget extends StatelessWidget {
   const ProfilePageListWidget(
       {super.key,
-      required this.leadingIconImage,
+      required this.leadingIcon,
       required this.title,
       this.style,
       this.color,
-      this.trailingIconImage});
-  final String leadingIconImage;
+      this.trailingIcon});
+  final Icon leadingIcon;
   final String title;
   final TextStyle? style;
   final Color? color;
-  final String? trailingIconImage;
+  final Icon? trailingIcon;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -27,10 +27,7 @@ class ProfilePageListWidget extends StatelessWidget {
             width: 56.h,
             padding: EdgeInsetsDirectional.all(16.h),
             decoration: IconButtonStyleHelper.fillPrimaryContainer,
-            child: CustomImageView(
-              imagePath: leadingIconImage,
-              color: color ?? appTheme.lightBlueA700,
-            ),
+            child: leadingIcon,
           ),
           Expanded(
             child: SizedBox(
@@ -48,13 +45,7 @@ class ProfilePageListWidget extends StatelessWidget {
           SizedBox(
             width: 18.h,
           ),
-          trailingIconImage != null
-              ? CustomImageView(
-                  imagePath: trailingIconImage,
-                  height: 32.h,
-                  width: 34.h,
-                )
-              : const SizedBox.shrink(),
+          trailingIcon ?? const SizedBox.shrink(),
         ],
       ),
     );

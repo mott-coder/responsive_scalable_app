@@ -172,7 +172,7 @@ class _SignInScreenState extends State<SignInScreen> {
           prefix: Container(
               margin: EdgeInsetsDirectional.symmetric(
                   horizontal: 16.h, vertical: 10.h),
-              child: Icon(Icons.mail)),
+              child: Icon(Icons.mail_rounded)),
           prefixConstraints: BoxConstraints(
             maxHeight: 44.h,
           ),
@@ -209,8 +209,8 @@ class _SignInScreenState extends State<SignInScreen> {
                   vertical: 10.h,
                 ),
                 child: Icon(provider.showPassword
-                    ? Icons.visibility
-                    : Icons.visibility_rounded)),
+                    ? Icons.visibility_rounded
+                    : Icons.visibility_off_rounded)),
           ),
           prefixConstraints: BoxConstraints(
             maxHeight: 44.h,

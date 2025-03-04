@@ -65,9 +65,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 NavigatorService.pushNamed(AppRoutes.privacyPolicyScreen);
               },
               child: ProfilePageListWidget(
-                leadingIconImage: ImageConstant.imageLockIcon,
+                leadingIcon: Icon(Icons.lock_outline_rounded),
                 title: "lbl_privacy".tr,
-                trailingIconImage: ImageConstant.imageRightChevron,
+                trailingIcon: Icon(Icons.arrow_right_alt_rounded),
               ),
             ),
             SizedBox(
@@ -80,7 +80,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     builder: (context) => const LogoutModal());
               },
               child: ProfilePageListWidget(
-                leadingIconImage: ImageConstant.imageLogoutIcon,
+                leadingIcon: Icon(Icons.logout_outlined),
                 title: "lbl_logout".tr,
                 style: CustomTextStyles.headlineSmallRegularRed,
                 color: appTheme.redA200,

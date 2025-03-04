@@ -67,15 +67,6 @@ String? validateRepeatPassword(String? password, String? repeatPassword) {
   }
 }
 
-String? validatePriceField(String value) {
-  if (value.isEmpty) return "err_msg_field_is_required".tr;
-  if (int.tryParse(value) == null) return "err_msg_invalid_input".tr;
-  if (int.parse(value) <= 0) {
-    return "err_msg_price_must_be_greater_than_zero".tr;
-  }
-  return null;
-}
-
 String? validateEmptyField(String value) {
   if (value.isEmpty) return "err_msg_field_is_required".tr;
   return null;

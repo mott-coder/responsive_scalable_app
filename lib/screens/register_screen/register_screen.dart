@@ -195,12 +195,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           suffix: Container(
             margin: EdgeInsetsDirectional.symmetric(
                 horizontal: 16.h, vertical: 10.h),
-            child: CustomImageView(
-              imagePath: ImageConstant.imageMailIcon,
-              height: 22.h,
-              width: 32.h,
-              fit: BoxFit.contain,
-            ),
+            child: Icon(Icons.mail_outline_rounded),
           ),
           suffixConstraints: BoxConstraints(
             maxHeight: 44.h,
@@ -237,14 +232,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 horizontal: 16.h,
                 vertical: 10.h,
               ),
-              child: CustomImageView(
-                imagePath: provider.showPassword
-                    ? ImageConstant.imageEyeOpen
-                    : ImageConstant.imageEyeClosed,
-                height: 22.h,
-                width: 32.h,
-                fit: BoxFit.contain,
-              ),
+              child: provider.showRepeatPassword
+                  ? Icon(Icons.visibility)
+                  : Icon(Icons.visibility_off_rounded),
             ),
           ),
           suffixConstraints: BoxConstraints(
@@ -282,14 +272,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 horizontal: 16.h,
                 vertical: 10.h,
               ),
-              child: CustomImageView(
-                imagePath: provider.showRepeatPassword
-                    ? ImageConstant.imageEyeOpen
-                    : ImageConstant.imageEyeClosed,
-                height: 22.h,
-                width: 32.h,
-                fit: BoxFit.contain,
-              ),
+              child: provider.showRepeatPassword
+                  ? Icon(Icons.visibility)
+                  : Icon(Icons.visibility_off_rounded),
             ),
           ),
           suffixConstraints: BoxConstraints(

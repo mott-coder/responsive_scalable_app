@@ -108,15 +108,9 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
           hintText: "msg_email_address".tr,
           textInputType: TextInputType.emailAddress,
           prefix: Container(
-            margin: EdgeInsetsDirectional.symmetric(
-                horizontal: 16.h, vertical: 10.h),
-            child: CustomImageView(
-              imagePath: ImageConstant.imageMailIcon,
-              height: 22.h,
-              width: 32.h,
-              fit: BoxFit.contain,
-            ),
-          ),
+              margin: EdgeInsetsDirectional.symmetric(
+                  horizontal: 16.h, vertical: 10.h),
+              child: Icon(Icons.mail_outline_rounded)),
           prefixConstraints: BoxConstraints(
             maxHeight: 44.h,
           ),
