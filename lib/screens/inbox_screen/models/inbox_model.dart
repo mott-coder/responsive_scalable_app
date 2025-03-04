@@ -1,0 +1,3 @@
+class InboxModel {
+  List messages = [];
+}
