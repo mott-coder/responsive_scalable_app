@@ -67,7 +67,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               child: ProfilePageListWidget(
                 leadingIcon: Icon(Icons.lock_outline_rounded),
                 title: "lbl_privacy".tr,
-                trailingIcon: Icon(Icons.arrow_right_alt_rounded),
+                trailingIcon: Icon(Icons.chevron_right_rounded),
               ),
             ),
             SizedBox(
